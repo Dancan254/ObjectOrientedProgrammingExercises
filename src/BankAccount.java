@@ -41,7 +41,7 @@ public class BankAccount {
             CalculateLoanLimit();
             //accountBalance = accountBalance + depositAmount
             System.out.println("Successfully deposited " + depositAmount);
-            showBalance();
+            //showBalance();
         }
     }
     public void withdrawMoney(int withdrawAmount){
@@ -56,7 +56,7 @@ public class BankAccount {
             if(accountBalance >= withdrawAmount) {
                 accountBalance -= withdrawAmount;
                 System.out.println("Successfully withdrawn " + withdrawAmount);
-                showBalance();
+                //showBalance();
                 CalculateLoanLimit();
             }else{
                 System.out.println("Failed to withdraw " + withdrawAmount + " Insufficient funds");
