@@ -1,6 +1,6 @@
 public class BankAccount {
     //encapsulation -> binding methods&attributes in class
-    //attributes -> instance variables
+    //attributes -> instance variables-> class instance -> global
     private String nameOfHolder;
     //name of holder
     //account number
@@ -12,7 +12,7 @@ public class BankAccount {
 //    public BankAccount(){
 //
 //    }
-    //parametirized const
+    //parameterized const
     public BankAccount(String name, String accountNumber){//parameters
         //this keyword -> use to refer to the current instance -parameter name equals the instance variable name
         nameOfHolder = name;
@@ -28,13 +28,14 @@ public class BankAccount {
         //account balance set to 0
         //increment the account balance with the deposit
         //check whether the amount is positive
-        if(depositAmount < 0){
+        if(depositAmount <= 0){
             System.out.println("Cannot deposit zero or less amount");
         }
         else {
             accountBalance +=depositAmount;
+            //accountBalance = accountBalance + depositAmount
             System.out.println("Successfully deposited " + depositAmount);
-            System.out.println("Your new balance is " + accountBalance);
+            showBalance();
         }
     }
     public void withdrawMoney(int withdrawAmount){
@@ -42,20 +43,27 @@ public class BankAccount {
         //account balance set to 0
         //increment the account balance with the deposit
         //check whether the amount is positive
-        if(withdrawAmount < 0){
+        if(withdrawAmount <= 0){
             System.out.println("Cannot withdraw zero or less amount");
         }
         else {
             if(accountBalance >= withdrawAmount) {
                 accountBalance -= withdrawAmount;
                 System.out.println("Successfully withdrawn " + withdrawAmount);
-                System.out.println("Your new balance is " + accountBalance);
+                showBalance();
             }else{
-                System.out.println("Insufficient funds");
+                System.out.println("Failed to withdraw " + withdrawAmount + " Insufficient funds");
             }
         }
+
     }
-    public String getNameOfHolder() {
+
+    public void showBalance(){
+        System.out.println("Displaying your balance ");
+        System.out.println("Your new balance is " + accountBalance);
+        System.out.println("- -".repeat(20));
+    }
+    public String getNameOfHolder() {//nameOfHolder -> getNameOfHolder-> return type -> type when declaring
         return nameOfHolder;
     }
 
