@@ -57,7 +57,7 @@ public class BankAccount {
                 accountBalance -= withdrawAmount;
                 System.out.println("Successfully withdrawn " + withdrawAmount);
                 //showBalance();
-                CalculateLoanLimit();
+                //CalculateLoanLimit();
             }else{
                 System.out.println("Failed to withdraw " + withdrawAmount + " Insufficient funds");
             }
@@ -68,13 +68,13 @@ public class BankAccount {
     public void CalculateLoanLimit() {
         //creating a loan limit method to based on account balance 
 
-        if  (accountBalance < 0) {
+        if  (accountBalance <= 0) { 
             System.out.println("You do not qualify for a loan");
-        }else if (accountBalance > 0 && accountBalance <= 500 ) {
+        }else if ( accountBalance <= 500 ) { 
             loanLimit = accountBalance * 2;
-        } else if (accountBalance > 501 && accountBalance <= 1000) {
+        } else if ( accountBalance <= 1000) { 
             loanLimit = accountBalance * 3;
-        } else if (accountBalance >= 1001 && accountBalance <= 1500) {
+        } else if (accountBalance <= 1500) {
             loanLimit = accountBalance* 4;
         }else {
             this.loanLimit = accountBalance* 5;
