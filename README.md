@@ -6,9 +6,9 @@ Congratulations on taking the first step towards mastering Object-Oriented Progr
 
 Object-Oriented Programming is a programming paradigm centered around objects and data rather than actions and logic. It allows you to create modular, reusable code by organizing data and functionality into classes and objects.
 
-### What's Included?
+### What's to be Included?
 
-**Learning Resources**: Curated collection of tutorials, articles, and videos to help you grasp OOP concepts step by step.
+**Learning Resources**: Curated collection of tutorials, articles to help you grasp OOP concepts step by step.
 
 **Code Examples**: Simple and understandable code snippets demonstrating key OOP principles and techniques in various programming languages.
 
