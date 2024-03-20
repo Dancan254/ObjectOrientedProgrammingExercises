@@ -1,5 +1,4 @@
 
-
 public class BankAccount {
     //encapsulation -> binding methods&attributes in class
     //attributes -> instance variables-> class instance -> global
@@ -41,10 +40,14 @@ public class BankAccount {
             CalculateLoanLimit();
             //accountBalance = accountBalance + depositAmount
             System.out.println("Successfully deposited " + depositAmount);
-            //showBalance();
+            try {
+                showBalance();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
-    public void withdrawMoney(int withdrawAmount){
+    public void withdrawMoney(int withdrawAmount) {
 
         //account balance set to 0
         //increment the account balance with the deposit
@@ -56,13 +59,22 @@ public class BankAccount {
             if(accountBalance >= withdrawAmount) {
                 accountBalance -= withdrawAmount;
                 System.out.println("Successfully withdrawn " + withdrawAmount);
-                //showBalance();
+                try {
+                    showBalance();
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 //CalculateLoanLimit();
             }else{
                 System.out.println("Failed to withdraw " + withdrawAmount + " Insufficient funds");
             }
         }
 
+    }
+
+    private void showBalance() throws InterruptedException {
+        System.out.println("Your account balance is "+ accountBalance+".00");
+        Thread.sleep(1000);
     }
 
     public void CalculateLoanLimit() {
