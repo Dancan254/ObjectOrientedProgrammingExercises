@@ -34,5 +34,3 @@ Contributions from the community are highly encouraged and welcomed! If you have
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ### Get Started Now!
-
-Ready to embark on your journey into the world of Object-Oriented Programming? Let's dive in and unleash your coding potential! 
