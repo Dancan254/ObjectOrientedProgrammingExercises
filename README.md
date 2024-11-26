@@ -31,6 +31,6 @@ Contributions from the community are highly encouraged and welcomed! If you have
 
 ### License
 
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ### Get Started Now!
