@@ -14,7 +14,7 @@ Object-Oriented Programming is a programming paradigm centered around objects an
 
 🔧 **Exercises**: Practice problems and mini-projects to reinforce your understanding and apply what you've learned.
 
-### Getting Started
+### Getting Started 
 
 1. **Clone the Repository**: Get a local copy of the repository by running:
    ```
